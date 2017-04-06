@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_fourth"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.samsung.detectapp.FourthActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:weightSum="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Spinner
+                android:layout_gravity="bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner">
+            </Spinner>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="200sp"
+                android:layout_height="100sp"
+                android:id="@+id/needimage1"
+                android:background="@drawable/image1"/>
+                <com.example.samsung.detectapp.RedPoint
+                    android:layout_width="200sp"
+                    android:layout_height="100sp">
+                </com.example.samsung.detectapp.RedPoint>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <ImageView
+            android:id="@+id/imageview2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5sp"
+            android:scaleType="fitCenter"/>
+        <com.example.samsung.detectapp.DetailCanvasView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.example.samsung.detectapp.DetailCanvasView>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="5sp">
+        <Button
+            android:text="뒤 로"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/BackBtn"
+            android:onClick="onClickBackButton" />
+
+        <Button
+            android:text="균열크기 입력"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/DamageColoringBtn"
+            android:onClick="onClickDInputBtn" />
+
+        <Button
+            android:text="저 장"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/SaveBtn"
+            android:onClick="onClickSaveBtn" />
+    </LinearLayout>
+</LinearLayout>

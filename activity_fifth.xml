@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_fifth"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.samsung.detectapp.FifthActivity">
+
+    //보고서페이지 id=Report
+    <LinearLayout
+        android:id="@+id/Report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5sp"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:layout_marginBottom="5sp">
+
+        //타이틀
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80sp"
+                android:text="외관조사 관련메모"
+                android:gravity="center"
+                android:textSize="40sp"
+                android:background="@drawable/layout_border"/>
+        </LinearLayout>
+
+        //1-2행
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="80sp"
+                    android:layout_height="50sp"
+                    android:text="조 사 자"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:background="@drawable/layout_border"
+                    />
+                <TextView
+                    android:layout_width="80sp"
+                    android:layout_height="50sp"
+                    android:text="날  짜"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:background="@drawable/layout_border"
+                   />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/AutoName"
+                    android:layout_width="120sp"
+                    android:layout_height="50sp"
+                    android:background="@drawable/layout_border"
+                    android:text="이름 자동으로 받아오기"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/AutoDate"
+                    android:layout_width="120sp"
+                    android:layout_height="50sp"
+                    android:background="@drawable/layout_border"
+                    android:text="날짜 자동으로 받아오기"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/layout_border">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/iv"/>
+                //scaleType : fitcenter > centerCrop > fitXY(이미지뷰크기에 맞춰 억지로 구겨넣기)
+            </LinearLayout>
+        </LinearLayout>
+
+        //3-4두번째행
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="80sp"
+                    android:layout_height="50sp"
+                    android:text="구 조 물"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:background="@drawable/layout_border" />
+                <TextView
+                    android:layout_width="80sp"
+                    android:layout_height="50sp"
+                    android:text="피  해"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:background="@drawable/layout_border"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/AutoBridgeName"
+                    android:layout_width="120sp"
+                    android:layout_height="50sp"
+                    android:background="@drawable/layout_border"
+                    android:text="구조물 자동으로 받아오기"
+                    android:gravity="center"/>
+                <EditText
+                    android:id="@+id/Damage"
+                    android:layout_width="120sp"
+                    android:layout_height="50sp"
+                    android:background="@drawable/layout_border"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:hint="피해의 종류를 입력하세요."/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/layout_border">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <ImageView
+                    android:layout_margin="5sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/Fimageview1"
+                    android:background="@drawable/image1"/>
+                <com.example.samsung.detectapp.RedPointForFinal
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </com.example.samsung.detectapp.RedPointForFinal>
+                </RelativeLayout>
+            </LinearLayout>
+    </LinearLayout>
+
+        //5행-6행 큰거
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="200sp"
+            android:layout_height="200sp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="200sp"
+                android:layout_height="100sp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="80sp"
+                    android:layout_height="100sp"
+                    android:text="손상위치"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:background="@drawable/layout_border"/>
+
+                <EditText
+                    android:id="@+id/DamageLocation"
+                    android:layout_width="120sp"
+                    android:layout_height="100sp"
+                    android:background="@drawable/layout_border"
+                    android:gravity="center"
+                    android:hint="손상위치에 대하여 자세하게 입력하세요."
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="200sp"
+                android:layout_height="100sp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="80sp"
+                    android:layout_height="100sp"
+                    android:text="조사의견"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:background="@drawable/layout_border"/>
+                <EditText
+                    android:id="@+id/etc"
+                    android:layout_width="120sp"
+                    android:layout_height="100sp"
+                    android:background="@drawable/layout_border"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:hint="세부사항 및 기타사항을 입력하세요."/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/layout_border">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/image2"
+                android:id="@+id/Fimageview2"
+                android:layout_margin="5sp"/>
+            <com.example.samsung.detectapp.DetailRedPoint
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </com.example.samsung.detectapp.DetailRedPoint>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+    //버튼부분
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="5sp">
+        //back
+        <Button
+            android:text="뒤로"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/BackBtn"
+            android:onClick="onClickBackButton"
+            />
+                //save
+
+        <Button
+            android:text="저장(detect_data.txt)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/SaveBtn"
+            android:onClick="onClickSaveBtn" />
+        //share
+        <Button
+            android:text="공유"
+            android:id="@+id/ShareBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickShareBtn"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
